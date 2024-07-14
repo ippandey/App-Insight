@@ -1,0 +1,35 @@
+.star-rating-breakdown {
+    width: 100%;
+  }
+  
+  .star {
+    color: gold;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+  }
+  
+  h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .progress-bar-container {
+    position: relative;
+    height: 1.5rem; /* Increase the height of the progress bar */
+    min-width: 150px; /* Set a minimum width for the progress bar */
+  }
+  
+  .bg-gray-200 {
+    background-color: #e2e8f0;
+  }
+  
+  .bg-yellow-400 {
+    background-color: #f6e05e;
+  }
+  
+  .transition-width {
+    transition: width 1s ease-in-out;
+  }
+  
