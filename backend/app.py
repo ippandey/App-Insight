@@ -22,6 +22,9 @@ logging.basicConfig(level=logging.DEBUG)
 # Initialize NLTK resources safely
 stop_words = set(stopwords.words("english"))
 
+@app.route('/')
+def home():
+    return "Hello, World!"
 
 def extract_aspect_keywords(review_text):
     if review_text is None:
