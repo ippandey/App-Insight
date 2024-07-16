@@ -50,7 +50,7 @@ const App = () => {
   const [starCounts, setStarCounts] = useState(
     JSON.parse(localStorage.getItem("starCounts")) || [0, 0, 0, 0, 0]
   );
-  const apiUrl = process.env.REACT_APP_API_URL;
+  
 
   useEffect(() => {
     // Save critical state to localStorage
@@ -93,7 +93,7 @@ const App = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `${apiUrl}/reviews/${encodeURIComponent(
+        `${process.env.REACT_APP_BACKEND_URL}/reviews/${encodeURIComponent(
           appIdInput.trim()
         )}?count=${reviewCount}&duration=${duration}&sort=${sortBy}`
       );
