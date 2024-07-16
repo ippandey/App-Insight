@@ -15,7 +15,7 @@ nltk.download("stopwords")
 
 app = Flask(__name__)
 frontend_url = (
-    "https://app-insight-xi.vercel.app" 
+    "https://appinsight.netlify.app" 
 )
 CORS(app, resources={r"/*": {"origins": frontend_url}})
 cache = Cache(app, config={"CACHE_TYPE": "simple"})
