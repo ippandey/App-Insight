@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AsyncSelect from "react-select/async";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+
 const InputForm = ({
   appIdInput,
   setAppIdInput,
@@ -17,7 +17,7 @@ const InputForm = ({
     if (!inputValue) return [];
     try {
       const response = await fetch(
-        `${apiUrl}/search?query=${encodeURIComponent(inputValue)}`
+        `${process.env.REACT_APP_BACKEND_URL}/search?query=${encodeURIComponent(inputValue)}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch app suggestions");
