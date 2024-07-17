@@ -14,7 +14,7 @@ nltk.download("punkt")
 nltk.download("stopwords")
 
 app = Flask(__name__)
-CORS(app, origins=["https://app-insight.netlify.app"])
+CORS(app, origins=["https://appinsight.netlify.app"])
 cache = Cache(app, config={"CACHE_TYPE": "simple"})
 
 logging.basicConfig(level=logging.DEBUG)
