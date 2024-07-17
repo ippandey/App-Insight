@@ -25,6 +25,10 @@ stop_words = set(stopwords.words("english"))
 @app.route('/')
 def home():
     return "Hello, World!"
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204
+
 
 def extract_aspect_keywords(review_text):
     if review_text is None:
